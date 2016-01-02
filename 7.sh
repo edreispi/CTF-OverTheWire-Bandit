@@ -13,7 +13,9 @@ send -- "HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs\r"
 expect -re {\$ $}
 
 # solution:
-# send "ls\r"
+# search for the line that contains the word "millionth", output shows the
+# desired line containing the flag.
+send "grep 'millionth' data.txt\r"
 
 expect -re {\$ $}
 send "exit\r"
